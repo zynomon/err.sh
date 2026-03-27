@@ -1,2 +1,10 @@
-# err.sh
-err.sh is a bundle of shell scripts meant to fix error.os this repo is completely community driven
+# e.sh
+
+e.sh is a script for fixing existing error.os system.
+
+---
+
+to begin type  ``bash e.sh``
+
+You have to contribute for more fixes as a bug or fixes comes in.
+to do that , start with sending a pull request.
