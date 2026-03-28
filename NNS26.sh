@@ -45,5 +45,6 @@ sudo apt remove -y --purge calamares calamares-settings-error partitionmanager s
 sudo apt install once -y && /bin/once ; sudo apt remove once -y
 sudo apt autoremove -y
 
-
 echo "thanks for using"
+
+exit 0
