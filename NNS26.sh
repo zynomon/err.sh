@@ -28,6 +28,17 @@ case $MIRROR_CHOICE in
        echo "Using standard Debian mirror" ;;
 esac
 
+sudo tee /etc/apt/sources.list > /dev/null << EOF
+deb $MIRROR trixie main contrib non-free non-free-firmware
+deb-src $MIRROR trixie main contrib non-free non-free-firmware
+deb http://security.debian.org/ trixie-security main contrib non-free non-free-firmware
+deb-src http://security.debian.org/ trixie-security main contrib non-free non-free-firmware
+deb $MIRROR trixie-updates main contrib non-free non-free-firmware
+deb-src $MIRROR trixie-updates main contrib non-free non-free-firmware
+deb $MIRROR trixie-backports main contrib non-free non-free-firmware
+deb-src $MIRROR trixie-backports main contrib non-free non-free-firmware
+EOF
+
 sudo rm -f /etc/apt/sources.list.d/debian-live-media.list
 sudo apt-get update
 sudo apt remove -y --purge calamares calamares-settings-error partitionmanager squashfs-tools live-task-recommended live-task-localisation live-boot live-boot-doc live-config live-config-doc live-config-systemd live-tools 
