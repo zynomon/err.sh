@@ -14,7 +14,9 @@ live_exec() {
 }
 
 normal_exec() {
-    echo "no normal exec script for now"
+  if grep -q "26" /etc/os-release 2>/dev/null; then
+        bash ./NNS26.sh
+    fi
 }
 
 echo "------------------------------------------------------------------${DATE}"
